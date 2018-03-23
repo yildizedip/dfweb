@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block body %}
+    <div id="page" class="hfeed site">
+        <div id="main" class="site-main">
+
+            <div style="display:none;">
+                <div id="davetiye">
+                </div>
+            </div>
+            <div id="etsSlider">
+                <img id="slideFixer" src="" height="500"/>
+                <div id="homeSlider">
+                    <a href="{% static "img/atakimm.jpg" %}" id="slideLink">
+
+
+
+                            <img src="{% static "img/2.jpg" %}" alt="İmaj Alt 1"/>
+
+
+                    </a>
+                </div>
+                <div class="w slideNav" style="display:none;">
+                    <a href="javascript:;" class="prev">p</a>
+                    <a href="javascript:;" class="next">n</a>
+                </div>
+            </div>
+
+            <div id="main-content" class="main-content indexPhp">
+
+
+                <div id="primary" class="content-area">
+
+                    <div class="w"> <!-- .w 1 start -->
+
+                        <div class="boxStyle" id="latest3post">
+                            <h2 class="boxStyleTitle">Hakkımızda</h2>
+                            <ul class="listBox">
+
+
+
+
+                            </ul>    <!-- .listBox -->
+                            <a href="#" class="moreLnk">Tüm Haberler</a>
+                        </div>     <!-- .boxStyle -->
+
+                        <div class="boxStyle" id="sceduleTable">
+                            <h2 class="boxStyleTitle">Tedavilerimiz</h2>
+                            <div id="matchSchedule">
+                                <ul>
+                                    <li>
+                                        <span class="matchDate"> {% if next_match.match_date_str %} <strong> {{ next_match.match_date_str | upper}}  </strong>    {% endif %}</span>
+                                        <strong class="matchPlace">{{ next_match.place }}</strong>
+                                        <div class="vs">
+                                            <p> {{ next_match.home }} - {{ next_match.away }}
+                                                 </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <ul id="ptTbl">
+
+
+
+                            </ul>
+                            <a href="http://aaskf.org.tr/1-amator-lig-2-grup-puan-tablosu-ve-fikstur-2017-18/" id="detailPT" target="_blank">Detaylı Puan
+                                Durumu</a>
+                        </div>
+                        <div class="boxStyle" id="presidentMsg">
+                            <a href="/baskanin-mesaji/">
+                                <img src="{% static "img/2.jpg" %}">
+                                <h4></h4>
+                                <p></p>
+
+                            </a>
+                        </div>  <!-- .presidentMsg -->
+                    </div> <!-- .w 1 end -->
+
+                    <div id="otherPosts" class="w">
+                        <div id="otherPostsImgCt">
+                            <a href="#"><img src="#"/></a>
+
+
+                            <ul id="otherPostsNav">
+
+
+
+                            </ul>
+                        </div>
+                        <a id="otherPostsCt" href="#">
+                            <h3 id="otherPostTitle"></h3>
+                            <p id="otherPostDetail"></p>
+                        </a>
+
+                    </div>
+                    <div class="clear"></div>
+                <div id="homeGallery">
+
+                    <div id='gallery-1' class='gallery galleryid-142 gallery-columns-5 gallery-size-thumbnail'>
+
+
+
+                    </div>
+                </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
